@@ -7,5 +7,6 @@ source /opt/ros/jazzy/setup.bash
 colcon build
 source install/setup.bash
 timeout 10 ros2 launch mypkg_example talk_listen.launch.py > /tmp/mypkg_example.log
+cat /tmp/mypkg_example.log
 cat /tmp/mypkg_example.log |
 grep 'Listen: 10'
